@@ -18,3 +18,11 @@ func Divide(x, y float32) (float32, error) {
 	// Return Result
 	return result, nil
 }
+
+// Divide by Two (Overwriting Elements in Slice)
+
+func DivideByTwo(pointer *[]float64) {
+	for i, val := range *pointer { //  using a pointer to extract the value
+		(*pointer)[i] = val / 2.0
+	}
+}
